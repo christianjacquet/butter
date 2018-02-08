@@ -3,7 +3,7 @@ package butter;
 public class Start {
 	
 	// data
-	private int numOfFieldsX = 10;
+	private int numOfFieldsX = 16;
 	private int numOfFieldsY = 10;
 	Board gameBoard;
 	static Start game;
@@ -11,7 +11,10 @@ public class Start {
 	public Start() {
 		gameBoard = new Board(numOfFieldsX,numOfFieldsY);
 		gameBoard.clear();
-		gameBoard.populate(10);
+		gameBoard.print();
+		gameBoard.setInvisibleFrame();
+		gameBoard.setBlockPattern(8);
+		gameBoard.populate(8);
 		gameBoard.print();
 	}
 	
